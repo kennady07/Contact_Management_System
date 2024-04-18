@@ -3,6 +3,8 @@
 This is a simple Contact Management Application built using HTML, CSS, and JavaScript. It allows users to manage their contacts efficiently by providing functionalities for storing, editing, and deleting contacts. 
 The application is designed to be responsive, ensuring a seamless user experience across various devices.
 
+Hosted link: https://6620c1e0c0d654b5e1a25f02--monumental-ganache-b78494.netlify.app/
+
 ## Features
 
 - Add new contacts with name, email, and phone number.
