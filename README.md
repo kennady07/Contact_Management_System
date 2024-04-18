@@ -3,6 +3,8 @@
 This is a simple Contact Management Application built using HTML, CSS, and JavaScript. It allows users to manage their contacts efficiently by providing functionalities for storing, editing, and deleting contacts. 
 The application is designed to be responsive, ensuring a seamless user experience across various devices.
 
+Hosted link:https://6620baee2398ffa9d2f34a16--snazzy-basbousa-fd6872.netlify.app/
+
 ## Features
 
 - Add new contacts with name, email, and phone number.
