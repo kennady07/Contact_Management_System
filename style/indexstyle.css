@@ -59,7 +59,24 @@
 
 /* new contact style */
 .newcontact{
-    position: absolute;
-    left:38%;
-    top:38%;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 5px;
+    }
+    #logoimg {
+        margin-bottom: 10px;
+    }
+    .title {
+        padding-top: 20px;
+        font-size: 24px;
+    }
+    .form {
+        padding: 20px;
+    }
 }
