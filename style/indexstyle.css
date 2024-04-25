@@ -42,19 +42,19 @@
 }
 
 /* form container style */
-.form_container{
+.container mt-3{
     position: relative;
-    width: 100%;
-    height: auto;
-    border: 1px solid black;
-    background-color: bisque;
 }
 .form{
+    position: absolute;
     top:30px;
     border:2px solid lavender;
     left:30px;
     padding:40px;
     border-radius: 10px;
+    width:700px;
+    left:20%;
+    top:35%;
 }
 
 /* new contact style */
