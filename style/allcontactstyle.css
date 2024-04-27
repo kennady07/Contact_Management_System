@@ -3,6 +3,7 @@
     border:0;
     box-sizing: border-box;
 }
+
 /* header style */
 .head{
     display: flex;
@@ -40,15 +41,34 @@
     padding-top: 30px;
 
 }
-@media screen and (max-width: 768px) {
-    .head {
-        flex-direction: column;
-        height: auto;
-        gap: 15px;
-        padding: 10px;
-    }
-    .title {
-        padding-top: 20px;
-        font-size: 24px;
-    }
+
+/* table container  style */
+
+#table_container{
+    position: relative;
+    height:auto;
+}
+#getbtn1{
+    position: absolute;
+    border:2px solid blue;
+    left:43%;
+    top:2%;
+    color:white;
+    font-size: 15px;
+    border-radius: 23px;
+    padding: 10px;
+    background-color: blue;
+}
+.btn,.btn23{
+    border:2px solid red;
+    padding:5px;
+    color:white;
+    border-radius: 3px;
+    background-color:red;
+}
+#table{
+    position: absolute;
+    top:70px;
+    left:10%;
+    width:80%;
 }
