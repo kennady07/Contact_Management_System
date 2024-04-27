@@ -40,3 +40,34 @@
     padding-top: 30px;
 
 }
+
+
+
+#table_container{
+    position: relative;
+    height:auto;
+}
+#getbtn1{
+    position: absolute;
+    border:2px solid blue;
+    left:43%;
+    top:2%;
+    color:white;
+    font-size: 15px;
+    border-radius: 23px;
+    padding: 10px;
+    background-color: blue;
+}
+.btn,.btn23{
+    border:2px solid red;
+    padding:5px;
+    color:white;
+    border-radius: 3px;
+    background-color:red;
+}
+#table{
+    position: absolute;
+    top:70px;
+    left:15%;
+    width:70%;
+}
