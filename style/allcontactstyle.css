@@ -72,3 +72,11 @@
     left:10%;
     width:80%;
 }
+/* form style */
+.form{
+    top:30px;
+    border:2px solid lavender;
+    left:30px;
+    padding:40px;
+    border-radius: 10px;
+}
