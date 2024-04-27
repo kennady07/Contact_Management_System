@@ -1,7 +1,7 @@
 const API_URL1="http://localhost:5000/user"  // Local JSON server url running at port 3000 run the server by 'npx json-server -p 3000 db.json'
-
+alert("Favourite contact details is fetched from json file")
 //Fill the table with contact detils from json file
-documentt.getElementById("getbtn1").addEventListener("click", async function(){
+documentt.getElementById("getbtn1").addEventListener('click', async function(){
     alert("Favourite contact details is fetched from json file")
     const data = await getdata();
     data.forEach(function(e){
@@ -41,12 +41,10 @@ async function deletedata(id){
 
             method:"DELETE"
         })
-        alert("This contact details is removed form file");
-        const btn1 = document.getElementById('b'+id);
-        btn1.style.backgroundColor="green";
-        btn1.style.borderColor="green";
-        btn1.innerHTML="REMOVED";
-        //event.target.parentElement.remove();
+        alert("This contact details is removed from favorite contact file");
+        const row=document.getElementById(id);
+        row.remove();
+        
 
 
     }catch(err){
