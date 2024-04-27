@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Contact</title>
+    <title>Fav Contact</title>
     <link rel="stylesheet" href="../style/favcontactstyle.css">
+  
+    <style>
+        table, th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: inherit;
+        }
+        th{
+            
+            font-size: 18px;
+            background-color:yellow;
+            color:black;
+        }
+        td {
+            color:black;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,7 +39,25 @@
     </header>
 
     <div class="title">FAVOURITE CONTACT DETAILS</div>
+
     
-  
+    <div id="table_container">
+        <button id="getbtn1">GET FAV CONTACTS</button>
+
+        <table id="table">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE</th>
+                <th>ADDRESS</th>
+                <th>OPERATION</th>
+            </tr>
+        </table>
+    </div>
+    
+  <script src="../favcontact.js"></script>
 </body>
 </html>
+
+
