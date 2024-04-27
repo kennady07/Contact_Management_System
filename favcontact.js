@@ -17,7 +17,7 @@ documentt.getElementById("getbtn1").addEventListener("click", async function(){
     });
 });
 // fetching the data from json file
-async function getdata(){
+async function getdataa(){
     try {
        
         const response = await fetch(API_URL1, {
