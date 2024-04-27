@@ -6,11 +6,11 @@ document.getElementById("getbtn1").addEventListener("click", async function(){
     const data = await getdata();
     data.forEach(function(e){
         const newrow = `<tr id="${e.id}">
-                        <td>${e.id}</td>
-                        <td>${e.name}</td>
-                        <td>${e.email}</td>
-                        <td>${e.phone}</td>
-                        <td>${e.addr}</td>
+                        <td id="id${e.id}">${e.id}</td>
+                        <td id="nm${e.id}">${e.name}</td>
+                        <td id="em${e.id}">${e.email}</td>
+                        <td id="ph${e.id}">${e.phone}</td>
+                        <td id="ad${e.id}">${e.addr}</td>
                         <td><button class="btn23" id="btn" onclick="editdata('${e.id}','${e.name}','${e.email}','${e.phone}','${e.addr}')">EDIT</button>&nbsp;<button  class="btn23" id="btn" onclick="deletedata('${e.id}')">DELETE</button>&nbsp;<button id="b${e.id}" class="btn23" onclick="favdata('${e.id}','${e.name}','${e.email}','${e.phone}','${e.addr}')">FAVORITE</button></td>
                     <tr>`;
         table.innerHTML += newrow;
@@ -44,6 +44,9 @@ async function deletedata(id){
         })
         
         alert("This contact details is removed form file");
+        const row=document.getElementById(id);
+        row.remove();
+
     }catch(err){
         console.log(err);
     }
@@ -52,9 +55,13 @@ async function deletedata(id){
 // update the contact details in json file
 async function editdata (id,name,email,phone,address){
 
-    id=`${id}`
+    id=id
     const form=document.getElementById("form");
     form.style.display="block";
+    const mytable=document.getElementById("table");
+    mytable.style.display="none";
+
+
 
     const myname=document.getElementById("fname");
     const myphone=document.getElementById("phone");
@@ -76,20 +83,23 @@ async function editdata (id,name,email,phone,address){
         const myemail1=document.getElementById("email").value;
         const myaddress1=document.getElementById("address").value;
 
+        document.getElementById("id"+id).innerHTML=id;
+        document.getElementById("nm"+id).innerHTML=myname1;
+        document.getElementById("em"+id).innerHTML=myemail1;
+        document.getElementById("ph"+id).innerHTML=myphone1;
+        document.getElementById("ad"+id).innerHTML=myaddress1;
+
         const editobj={
            
-            name:`${myname1}`,
-            email:`${myemail1}`,
-            phone:`${myphone1}`,
-            addr:`${myaddress1}`
+            name:myname1,
+            email:myemail1,
+            phone:myphone1,
+            addr:myaddress1
         }
         handle_editdata(editobj,id);
-        console.log(editobj);
-        myname.value=" ";
-        myemail.value=" ";
-        myphone.value=" ";
-        myaddress.value=" ";
         form.style.display = "none";
+        mytable.style.display="block"
+
     })
 }
 
