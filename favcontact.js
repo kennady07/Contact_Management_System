@@ -1,7 +1,7 @@
 const API_URL1="http://localhost:5000/user"  // Local JSON server url running at port 3000 run the server by 'npx json-server -p 3000 db.json'
-alert("Favourite contact details is fetched from json file")
+
 //Fill the table with contact detils from json file
-documentt.getElementById("getbtn1").addEventListener('click', async function(){
+document.getElementById("getbtn1").addEventListener('click', async function(){
     alert("Favourite contact details is fetched from json file")
     const data = await getdata();
     data.forEach(function(e){
@@ -17,7 +17,7 @@ documentt.getElementById("getbtn1").addEventListener('click', async function(){
     });
 });
 // fetching the data from json file
-async function getdataa(){
+async function getdata(){
     try {
        
         const response = await fetch(API_URL1, {
