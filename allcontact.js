@@ -6,11 +6,11 @@ document.getElementById("getbtn1").addEventListener("click", async function(){
     const data = await getdata();
     data.forEach(function(e){
         const newrow = `<tr id="${e.id}">
-                        <td id="id${e.id}">${e.id}</td>
-                        <td id="nm${e.id}">${e.name}</td>
-                        <td id="em${e.id}">${e.email}</td>
-                        <td id="ph${e.id}">${e.phone}</td>
-                        <td id="ad${e.id}">${e.addr}</td>
+                        <td>${e.id}</td>
+                        <td class="name">${e.name}</td>
+                        <td class="email">${e.email}</td>
+                        <td class="phone">${e.phone}</td>
+                        <td class="address">${e.addr}</td>
                         <td><button class="btn23" id="btn" onclick="editdata('${e.id}','${e.name}','${e.email}','${e.phone}','${e.addr}')">EDIT</button>&nbsp;<button  class="btn23" id="btn" onclick="deletedata('${e.id}')">DELETE</button>&nbsp;<button id="b${e.id}" class="btn23" onclick="favdata('${e.id}','${e.name}','${e.email}','${e.phone}','${e.addr}')">FAVORITE</button></td>
                     <tr>`;
         table.innerHTML += newrow;
@@ -52,70 +52,61 @@ async function deletedata(id){
     }
 }
 
-// update the contact details in json file
-async function editdata (id,name,email,phone,address){
-
-    id=id
-    const form=document.getElementById("form");
-    form.style.display="block";
-    const mytable=document.getElementById("table");
-    mytable.style.display="none";
 
 
+async function editdata(id, name, email, phone, address) {
+    const form = document.getElementById("form");
+    form.style.display = "block";
+    const mytable = document.getElementById("table");
+    mytable.style.display = "none";
 
-    const myname=document.getElementById("fname");
-    const myphone=document.getElementById("phone");
-    const myemail=document.getElementById("email");
-    const myaddress=document.getElementById("address");
-    
+    const myname = document.getElementById("fname");
+    const myphone = document.getElementById("phone");
+    const myemail = document.getElementById("email");
+    const myaddress = document.getElementById("address");
 
     myname.value = name;
     myemail.value = email;
-    myphone.value=phone;
-    myaddress.value=address;
+    myphone.value = phone;
+    myaddress.value = address;
 
-
-    document.getElementById("uptbtn").addEventListener("click",function(event){
+    document.getElementById("uptbtn").addEventListener("click", function (event) {
         event.preventDefault();
 
-        const myname1=document.getElementById("fname").value;
-        const myphone1=document.getElementById("phone").value;
-        const myemail1=document.getElementById("email").value;
-        const myaddress1=document.getElementById("address").value;
+        const myname1 = document.getElementById("fname").value;
+        const myphone1 = document.getElementById("phone").value;
+        const myemail1 = document.getElementById("email").value;
+        const myaddress1 = document.getElementById("address").value;
 
-        document.getElementById("id"+id).innerHTML=id;
-        document.getElementById("nm"+id).innerHTML=myname1;
-        document.getElementById("em"+id).innerHTML=myemail1;
-        document.getElementById("ph"+id).innerHTML=myphone1;
-        document.getElementById("ad"+id).innerHTML=myaddress1;
+        const row = document.getElementById(id);
+        row.querySelector(".name").innerText = myname1;
+        row.querySelector(".email").innerText = myemail1;
+        row.querySelector(".phone").innerText = myphone1;
+        row.querySelector(".address").innerText = myaddress1;
 
-        const editobj={
-           
-            name:myname1,
-            email:myemail1,
-            phone:myphone1,
-            addr:myaddress1
-        }
-        handle_editdata(editobj,id);
+        const editobj = {
+            name: myname1,
+            email: myemail1,
+            phone: myphone1,
+            addr: myaddress1
+        };
+        handle_editdata(editobj, id);
         form.style.display = "none";
-        mytable.style.display="block"
-
-    })
+        mytable.style.display = "block";
+    });
 }
 
-async function handle_editdata(user,id){
-    try{
-        const response = await fetch(`${API_URL}/${id}`,{
-            method:"PUT",
-            headers:{
-                "content-type":"Application/json"
+async function handle_editdata(user, id) {
+    try {
+        const response = await fetch(`${API_URL}/${id}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "Application/json"
             },
-            body:JSON.stringify(user)
-        })
-
-    }catch(err){
+            body: JSON.stringify(user)
+        });
+    } catch (err) {
         console.log(err);
-
     }
 }
 
