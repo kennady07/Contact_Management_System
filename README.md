@@ -3,7 +3,7 @@
 This is a simple Contact Management Application built using HTML, CSS, and JavaScript. It allows users to manage their contacts efficiently by providing functionalities for storing, editing, and deleting contacts. 
 The application is designed to be responsive, ensuring a seamless user experience across various devices.
 
-Hosted link: https://662d5c819e25492196b2feb6--lucky-tartufo-d4c5e7.netlify.app/
+Hosted link: https://662ebb0e52d90f12e790777a--chimerical-starlight-ebb964.netlify.app/
 
 ## Features
 
