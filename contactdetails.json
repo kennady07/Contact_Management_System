@@ -1,11 +1,18 @@
 {
   "users": [
     {
-      "name": "gohul",
-      "email": "71762107027@cit.edu.in",
-      "phone": "5656565656",
-      "addr": "109,Anjaneeyar kovil street,Tiruvannamalai",
-      "id": "617c"
+      "id": "60ad",
+      "name": "kennady",
+      "email": "kennady27032003@gmail.com",
+      "phone": "6374991710",
+      "addr": "109, Anjaneeyar Kovil street, Edathanur vill & post, Thandrampet TK."
+    },
+    {
+      "name": "pradeep ",
+      "email": "71762107031@cit.edu.in",
+      "phone": "8967458090",
+      "addr": "109, Nehru st, Erode, Tamil Nadu",
+      "id": "7145"
     }
   ]
 }
