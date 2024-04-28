@@ -1,3 +1,25 @@
 {
-  "user": []
+  "user": [
+    {
+      "id": "60ad",
+      "name": "kennady",
+      "email": "kennady27032003@gmail.com",
+      "phone": "6374991710",
+      "addr": "109, Anjaneeyar Kovil street, Edathanur vill & post, Thandrampet TK."
+    },
+    {
+      "id": "cb26",
+      "name": "Sam   ",
+      "email": "71762107023@cit.edu.in",
+      "phone": "8760987890",
+      "addr": "109, Nehru st, Coimbatore, Tamil Nadu"
+    },
+    {
+      "id": "7145",
+      "name": "pradeep ",
+      "email": "71762107031@cit.edu.in",
+      "phone": "8967458090",
+      "addr": "109, Nehru st, Erode, Tamil Nadu"
+    }
+  ]
 }
