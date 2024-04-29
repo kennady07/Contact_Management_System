@@ -1,65 +1,221 @@
-*{
-    margin:0;
-    border:0;
+* {
+    margin: 0;
+    border: 0;
     box-sizing: border-box;
 }
-/* header style */
-.head{
+
+/* Header style */
+.head {
     display: flex;
-    border:1px solid black;
-    width:100%;
+    border: 1px solid black;
+    width: 100%;
     height: 90px;
     align-items: center;
     justify-content: space-around;
     background-color: black;
 }
-#logoimg{
+
+#logoimg {
     height: 50px;
-    width:50px;
-}
-.head > a{
-    color:white;
-    text-decoration: none;
-}
-.head > a:hover{
-    border:1px solid red;
-    padding: 10px;
-    border-radius: 5px;
-    background-color:red; 
-    box-sizing: border-box;
+    width: 50px;
 }
 
-/* title  style */
-.title{
-    width:100%;
+.head > a {
+    color: white;
+    text-decoration: none;
+}
+
+.head > a:hover {
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: red;
+}
+
+/* Title style */
+.title {
+    width: 100%;
     height: 80px;
     color: red;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     padding-top: 30px;
-
 }
 
-/* form container style */
-.form_container{
+/* Form container style */
+.form_container {
     position: relative;
-    width: 100%;
-    height: auto;
-    border: 1px solid black;
-    background-color: bisque;
-}
-.form{
-    top:30px;
-    border:2px solid lavender;
-    left:30px;
-    padding:40px;
-    border-radius: 10px;
 }
 
-/* new contact style */
-.newcontact{
+.form {
     position: absolute;
-    left:38%;
-    top:38%;
+    border: 2px solid lavender;
+    padding: 40px;
+    border-radius: 10px;
+    left:22%;
+    width: 700px;
 }
+
+/* New contact style */
+.newcontact {
+    position: absolute;
+    left: 40%;
+    top: 38%;
+    font-size: 20px;
+}
+
+
+@media screen and (min-width: 290px) and (max-width: 481px) {
+    
+    .head{
+        width:480px;
+        height: 90px;
+    }
+
+    #logoimg{
+        height: 40px;
+        width:40px;
+    }
+    .head > a{
+        font-size: 13px;
+    }
+    .title{
+        width:480px;
+        color:green;
+        font-size: 23px;
+    }
+    #form_container{
+        position: relative;
+        width: 480px;
+    }
+    .form{
+        position: absolute;
+        left:13%;
+        width: 350px;
+    }
+    /* new contact style */
+    .newcontact{
+        position: absolute;
+        left:35%;
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (min-width: 481px) and (max-width: 690px) {
+
+    .head{
+        width:690px;
+        height: 90px;
+    }
+    
+    #logoimg{
+        height: 43px;
+        width:43px;
+    }
+    .head > a{
+        
+        font-size: 15px;
+    }
+    
+    .title{
+        width:690px;
+        font-size: 20px;
+        color:black;
+    }
+    #form_container{
+        position: relative;
+        width:690px;
+    }
+    .form{
+        position: absolute;
+        left:10%;
+        width: 450px;
+    }
+    
+    .newcontact{
+        position: absolute;
+        left:35%;
+        font-size: 17px;
+    }
+    
+} 
+
+ @media screen and (min-width: 691px) and (max-width: 992px) {
+    .head{
+        width:992px;
+        height: 90px;
+    }
+    
+    #logoimg{
+        height: 43px;
+        width:43px;
+    }
+    .head > a{
+        
+        font-size: 20px;
+    }
+    
+    .title{
+        width:992px;
+        font-size: 25px;
+        color:blue;
+    }
+    #form_container{
+        position: relative;
+        width:992px;
+    }
+    .form{
+        position: absolute;
+        left:20%;
+        width: 500px;
+    }
+    
+    .newcontact{
+        position: absolute;
+        left:35%;
+        font-size: 19px;
+    }
+     
+    
+
+} 
+/*  
+@media screen and (min-width: 993px) and (max-width: 1551px) {
+    .head{
+        width:1552px;
+        height: 90px;
+    }
+    
+    #logoimg{
+        height: 45px;
+        width:45px;
+    }
+    .head > a{
+        
+        font-size: 25px;
+    }
+    
+    .title{
+        width:1552px;
+        font-size: 30px;
+        color:red;
+    }
+    #form_container{
+        position: relative;
+        width:1552px;
+    }
+    .form{
+        position: absolute;
+        left:22%;
+        width: 700px;
+    }
+    
+    .newcontact{
+        position: absolute;
+        left:38%;
+        font-size: 25px;
+    }
+}
+ */
