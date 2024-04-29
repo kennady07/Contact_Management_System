@@ -26,6 +26,36 @@
             color:black;
             font-size: 18px;
         }
+
+        @media screen and (min-width: 290px) and (max-width: 481px) {
+            th{
+                font-size:8px;
+                background-color:blue;
+                color:white;
+                font-weight:bolder;
+            }
+            td {
+                color:black;
+                font-size:8px;
+                font-weight: 600;
+            }
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 690px) {
+
+            th{
+                font-size:15px;
+                background-color:blue;
+                color:white;
+                font-weight:bolder;
+            }
+            td {
+                color:black;
+                font-size:13px;
+                font-weight: 600;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -38,7 +68,9 @@
         <a href="../pages/login.html">LOGIN</a>
     </header>
 
-    <div class="title">FAVOURITE CONTACT DETAILS</div>
+    <div class="title">
+        <p class="titlenm">FAVOURITE CONTACT DETAILS</p>
+    </div>
 
     
     <div id="table_container">
@@ -53,6 +85,25 @@
                 <th>ADDRESS</th>
                 <th>OPERATION</th>
             </tr>
+<!--         
+            <tr id="as12">
+                <td>as12</td>
+                <td class="name">kennady M</td>
+                <td class="email">71762107023@cit.edu.in</td>
+                <td class="phone">6374881627</td>
+                <td class="address">109,Anjaneeyar Kovil str,Thandra,pet TK, Tiruvannamalai DT</td>
+                <td><button class="btn23" id="btn" onclick="deletedata('as12')">REMOVE</button></td>
+            </tr>
+
+            <tr id="as13">
+                <td>as13</td>
+                <td class="name">Ram </td>
+                <td class="email">71762107024@cit.edu.in</td>
+                <td class="phone">6374881625</td>
+                <td class="address">109,Ganghi Nagar, Covai</td>
+                <td><button class="btn23" id="btn" onclick="deletedata('as12')">REMOVE</button></td>
+            </tr>
+     -->
         </table>
     </div>
     
